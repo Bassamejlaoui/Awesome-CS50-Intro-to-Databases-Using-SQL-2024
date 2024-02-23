@@ -29,11 +29,22 @@
 ❗ Cheating violates the Academic Honesty of the course, not to mention it's totally pointless if you actually want to learn programming.
 
 ## Table of Contents
+| week  | Problem Sets |
+| ------------- | ------------- |
+| week 0 | [Cyberchase](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%200/Cyberchase)
+| week 0 | [36 Views](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%200/36%20Views)
+
+| week 0 | [Normals](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%200/Normals)
+| week 0 | [Players](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%200/Players)
+
+
+
+
+
 ### Week 0
-- [Cyberchase](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%200/Cyberchase)
-- [36 Views](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%200/36%20Views)
-- [Normals](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%200/Normals)
-- [Players](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%200/Players)
+- 
+- 
+- 
 
 ### Week 1
 - ["Packages, Please"](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%201/Packages%2C%20Please)
