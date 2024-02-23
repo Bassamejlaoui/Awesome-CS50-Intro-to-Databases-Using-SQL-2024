@@ -1,129 +1,52 @@
--- Sample query to insert a new user
-INSERT INTO `users` (`username`, `email`, `created_at`) VALUES
-('JohnDoe', 'john.doe@example.com', CURRENT_TIMESTAMP),
-('JaneDoe', 'jane.doe@example.com', CURRENT_TIMESTAMP),
-('AliceSmith', 'alice.smith@example.com', CURRENT_TIMESTAMP),
-('BobBrown', 'bob.brown@example.com', CURRENT_TIMESTAMP),
-('MaryGreen', 'mary.green@example.com', CURRENT_TIMESTAMP),
-('JohnHarvard', 'john.harvard@example.com', CURRENT_TIMESTAMP),
-('DavidMalan', 'david.malan@example.com', CURRENT_TIMESTAMP);
+-- Inserting sample data for Anime
+INSERT INTO Anime (title, studio_id, release_year, description)
+VALUES
+('Death Note', 5, 2006, 'A high school student discovers a mysterious notebook that allows him to kill anyone whose name he writes in it.'),
+('Demon Slayer', 4, 2019, 'Tanjiro Kamado, a young boy, becomes a demon slayer to avenge his family and cure his sister, who turned into a demon.'),
+('Attack on Titan', 2, 2013, 'In a world where humanity resides within enormous walled cities to protect themselves from Titans, gigantic humanoid creatures, a young boy discovers his hidden powers.'),
+('Jujutsu Kaisen', 6, 2020, 'A high school student gets involved in the world of sorcery and curses after consuming a cursed object.'),
+('Hunter x Hunter', 7, 2011, 'A young boy aspires to become a Hunter, an elite member of society who searches for rare treasures, secret locations, and monsters.'),
+('Dragon Ball Z', 8, 1989, 'The adventures of Goku and his friends as they defend Earth and the universe from various threats.'),
+('Cowboy Bebop', 9, 1998, 'The adventures of a group of bounty hunters traveling in their spaceship, the Bebop, in the year 2071.'),
+('My Hero Academia', 10, 2016, 'A boy born without superpowers in a world where they are common, dreams of becoming a hero.');
 
--- Sample query to insert user interests
-INSERT INTO `user_interests` (`user_id`, `interest`) VALUES
-(1, 'Coding'),
-(1, 'Music'),
-(1, 'Photography'),
-(2, 'Reading'),
-(2, 'Hiking'),
-(2, 'Cooking'),
-(3, 'Dancing'),
-(3, 'Art'),
-(3, 'Travel'),
-(4, 'Science'),
-(4, 'Sports'),
-(4, 'Videogames'),
-(5, 'Writing'),
-(5, 'Animals'),
-(5, 'Volunteering'),
-(6, 'Coding'),
-(6, 'Music'),
-(6, 'Photography'),
-(7, 'Coding'),
-(7, 'Sports'),
-(7, 'Travel');
+-- Inserting sample data for Characters
+INSERT INTO Characters (character_name, anime_id)
+VALUES
+('Light Yagami', (SELECT id FROM Anime WHERE title = 'Death Note')),
+('Ryuk', (SELECT id FROM Anime WHERE title = 'Death Note')),
+('Tanjiro Kamado', (SELECT id FROM Anime WHERE title = 'Demon Slayer')),
+('Nezuko Kamado', (SELECT id FROM Anime WHERE title = 'Demon Slayer')),
+('Eren Yeager', (SELECT id FROM Anime WHERE title = 'Attack on Titan')),
+('Levi Ackerman', (SELECT id FROM Anime WHERE title = 'Attack on Titan')),
+('Yuji Itadori', (SELECT id FROM Anime WHERE title = 'Jujutsu Kaisen')),
+('Gon Freecss', (SELECT id FROM Anime WHERE title = 'Hunter x Hunter')),
+('Killua Zoldyck', (SELECT id FROM Anime WHERE title = 'Hunter x Hunter')),
+('Goku', (SELECT id FROM Anime WHERE title = 'Dragon Ball Z')),
+('Vegeta', (SELECT id FROM Anime WHERE title = 'Dragon Ball Z')),
+('Spike Spiegel', (SELECT id FROM Anime WHERE title = 'Cowboy Bebop')),
+('Izuku Midoriya', (SELECT id FROM Anime WHERE title = 'My Hero Academia'));
 
--- Sample query to create a new group
-INSERT INTO `groups` (`name`, `description`, `creator_id`, `created_at`) VALUES
-('Coding Enthusiasts', 'A group for coding lovers', 1, CURRENT_TIMESTAMP),
-('Bookworms', 'For those who love reading and discussing books', 2, CURRENT_TIMESTAMP);
+-- Query to retrieve all anime titles
+SELECT title FROM Anime;
 
--- Sample query to create a new event
-INSERT INTO `events` (`name`, `date`, `location`, `interests`, `creator_id`, `group_id`, `created_at`) VALUES
-('Coding Bootcamp', '2023-12-15', 'Tech Center', 'Coding', 1, 1, CURRENT_TIMESTAMP),
-('Book Club Meeting', '2023-12-20', 'Library Cafe', 'Reading, Literature', 2, 2, CURRENT_TIMESTAMP),
-('Hiking Trip', '2023-12-25', 'Mount Fuji', 'Hiking, Nature', 3, 1, CURRENT_TIMESTAMP),
-('Art Exhibition', '2024-01-01', 'Art Gallery', 'Art, Design', 4, 1, CURRENT_TIMESTAMP),
-('Volunteer Day', '2024-01-10', 'Animal Shelter', 'Animals, Community', 5, 1, CURRENT_TIMESTAMP);
+-- Query to retrieve all characters in a specific anime
+SELECT character_name FROM Characters WHERE anime_id = (SELECT id FROM Anime WHERE title = 'Demon Slayer');
 
--- Sample query to join a user to a group
-INSERT INTO `user_groups` (`user_id`, `group_id`) VALUES (1, 1);
+-- Query to retrieve all anime with a certain genre
+SELECT title FROM Anime WHERE id IN (SELECT anime_id FROM Anime_Genres WHERE genre_id = (SELECT id FROM Genres WHERE genre_name = 'Action'));
 
--- User 1 joins the Coding Bootcamp event
-INSERT INTO `user_events` (`user_id`, `event_id`) VALUES (1, 1);
+-- Query to retrieve all episodes of a specific anime
+SELECT episode_number, title AS episode_title FROM Episodes WHERE anime_id = (SELECT id FROM Anime WHERE title = 'Attack on Titan');
 
--- User 2 attends the Book Club Meeting
-INSERT INTO `user_events` (`user_id`, `event_id`) VALUES (2, 2);
+-- Query to retrieve the voice actors for a specific character
+SELECT voice_actor_name FROM Voice_Actors WHERE character_id = (SELECT id FROM Characters WHERE character_name = 'Levi');
 
--- User 3 participates in the Hiking Trip
-INSERT INTO `user_events` (`user_id`, `event_id`) VALUES (3, 3);
+-- Query to insert a new anime into the database
+INSERT INTO Anime (title, studio_id, release_year, description) VALUES ('Fullmetal Alchemist: Brotherhood', 11, 2009, 'Two brothers search for the Philosopher''s Stone to restore their bodies after a failed alchemy experiment.');
 
--- User 4 visits the Art Exhibition
-INSERT INTO `user_events` (`user_id`, `event_id`) VALUES (4, 4);
+-- Query to update the description of an existing anime
+UPDATE Anime SET description = 'A group of high school students form a club to investigate mysterious incidents and occurrences.' WHERE title = 'Persona 5: The Animation';
 
--- User 5 volunteers at the Animal Shelter event
-INSERT INTO `user_events` (`user_id`, `event_id`) VALUES (5, 5);
-
--- Sample query to share content
-INSERT INTO `contents` (`user_id`, `event_id`, `type`, `text`, `created_at`) VALUES (1, 1, 'Text', 'Check out this amazing article!', CURRENT_TIMESTAMP);
-
--- Sample query to insert a new match
-INSERT INTO `user_matches` (`user_id1`, `user_id2`, `compatibility_score`, `created_at`) VALUES (1, 2, 90, CURRENT_TIMESTAMP);
-
--- Sample query to retrieve user profiles
-SELECT * FROM `users`;
-
--- Query to find groups a user has joined
-SELECT `users`.`username`, `groups`.`name`
-FROM `users`
-JOIN `user_groups` ON `users`.`id` = `user_groups`.`user_id`
-JOIN `groups` ON `user_groups`.`group_id` = `groups`.`id`
-WHERE `users`.`id` = 1;
-
--- Query to find events a user is attending
-SELECT `users`.`username`, `events`.`name`
-FROM `users`
-JOIN `user_events` ON `users`.`id` = `user_events`.`user_id`
-JOIN `events` ON `user_events`.`event_id` = `events`.`id`
-WHERE `users`.`id` = 1;
-
--- Query to find shared interests and calculate match score
-SELECT
-    `u1`.`username` AS `user1`,
-    `u2`.`username` AS `user2`,
-    `i1`.`interest` AS `common_interest`,
-    COUNT(DISTINCT `i1`.`interest`) AS `num_common_interests`,
-    COUNT(DISTINCT `i2`.`interest`) AS `num_total_interests`,
-    ROUND((COUNT(DISTINCT `i1`.`interest`) / COUNT(DISTINCT `i2`.`interest`)) * 100) AS `match_score`
-FROM `users` `u1`
-JOIN `users` `u2` ON `u1`.`id` < `u2`.`id`
-JOIN (
-    SELECT `ui1`.`user_id`, `ui1`.`interest`
-    FROM `user_interests` `ui1`
-    CROSS JOIN LATERAL
-    (SELECT DISTINCT `interest` FROM `user_interests` WHERE `user_id` = `user_id`) `i`
-) `i1` ON `u1`.`id` = `i1`.`user_id`
-JOIN (
-    SELECT `ui2`.`user_id`, `ui2`.`interest`
-    FROM `user_interests` `ui2`
-    CROSS JOIN LATERAL
-    (SELECT DISTINCT `interest` FROM `user_interests` WHERE `user_id` = `user_id`) `i`
-) `i2` ON `u2`.`id` = `i2`.`user_id`
-WHERE `i1`.`interest` = `i2`.`interest`
-GROUP BY `u1`.`id`, `u2`.`id`, `i1`.`interest`
-ORDER BY `match_score` DESC;
-
--- Sample query to retrieve matched users for a given user
-SELECT `users`.`username`, `user_matches`.`compatibility_score`
-FROM `users`
-JOIN `user_matches` ON `users`.`id` = `user_matches`.`user_id1` OR `users`.`id` = `user_matches`.`user_id2`
-WHERE `users`.`id` = 1;
-
--- View to display matched users and their compatibility scores
-CREATE VIEW `matched_users_view` AS
-SELECT `u1`.`username` AS `user1`, `u2`.`username` AS `user2`, `user_matches`.`compatibility_score`
-FROM `users` `u1`
-JOIN `user_matches` ON `u1`.`id` = `user_matches`.`user_id1`
-JOIN `users` `u2` ON `user_matches`.`user_id2` = `u2`.`id`;
-
--- Sample query to select data from the MatchedUsersView
-SELECT * FROM `matched_users_view`;
+-- Query to delete a character from the database
+DELETE FROM Characters WHERE character_name = 'Mikasa Ackerman';
