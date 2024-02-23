@@ -31,12 +31,12 @@
 ## Table of Contents
 
 ### Week 0
-| Querying  | Problem Sets |
-| ------------- | ------------- |
-| week 0 | [Cyberchase](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%200/Cyberchase) | 
-| week 0 | [36 Views](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%200/36%20Views) |
-| week 0 | [Normals](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%200/Normals) |
-| week 0 | [Players](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%200/Players) |
+| Querying  | Problem Sets | Achievement |
+| ------------- | ------------- | ------------- | 
+| week 0 | [Cyberchase](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%200/Cyberchase) |✅
+| week 0 | [36 Views](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%200/36%20Views) |✅
+| week 0 | [Normals](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%200/Normals) |✅
+| week 0 | [Players](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%200/Players) |✅
 
 ### Week 1
 | Relating  | Problem Sets |
