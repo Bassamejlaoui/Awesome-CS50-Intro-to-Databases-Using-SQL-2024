@@ -31,24 +31,20 @@
 ## Table of Contents
 
 ### Week 0
-| week  | Problem Sets |
-| ------------- | ------------- |
-| week 0 | [Cyberchase](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%200/Cyberchase) |
-| week 0 | [36 Views](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%200/36%20Views) |
-| week 0 | [Normals](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%200/Normals) |
-| week 0 | [Players](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%200/Players) |
+| week  | Problem Sets | | Number |
+| ------------- | ------------- | | ------------- |
+| week 0 | [Cyberchase](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%200/Cyberchase) | 1 |
+| week 0 | [36 Views](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%200/36%20Views) |2|
+| week 0 | [Normals](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%200/Normals) |3|
+| week 0 | [Players](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%200/Players) |4|
 
-
-
-
-
-
-- 
-- 
-- 
 
 ### Week 1
-- ["Packages, Please"](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%201/Packages%2C%20Please)
+| week  | Problem Sets |
+| ------------- | ------------- |
+| week 1 | - ["Packages, Please"](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%201/Packages%2C%20Please)|
+| week 1 | [36 Views](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%200/36%20Views) |
+| week 1 | [Normals](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%200/Normals) |
 - [DESE](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%201/DESE)
 - [Moneyball](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%201/Moneyball)
 
