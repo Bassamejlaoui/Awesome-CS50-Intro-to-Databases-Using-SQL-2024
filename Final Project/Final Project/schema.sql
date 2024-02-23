@@ -1,92 +1,50 @@
--- Users table to store user profiles
-CREATE TABLE `users` (
-    `id` INT PRIMARY KEY AUTO_INCREMENT,
-    `username` VARCHAR(255) NOT NULL UNIQUE,
-    `email` VARCHAR(255) NOT NULL UNIQUE,
-    `created_at` DATETIME DEFAULT CURRENT_TIMESTAMP
+-- Table: Anime
+CREATE TABLE Anime (
+    id SERIAL PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    studio_id INT REFERENCES Studios(id),
+    release_year INT,
+    description TEXT
 );
 
--- Users table to store user interests
-CREATE TABLE `user_interests` (
-    `user_id` INT NOT NULL,
-    `interest` VARCHAR(255) NOT NULL,
-    PRIMARY KEY (`user_id`, `interest`),
-    FOREIGN KEY (`user_id`) REFERENCES `users`(`id`),
-    INDEX `user_interests_user_id_index` (`user_id`),
-    INDEX `user_interests_interest_index` (`interest`)
+-- Table: Characters
+CREATE TABLE Characters (
+    id SERIAL PRIMARY KEY,
+    character_name VARCHAR(255) NOT NULL,
+    anime_id INT REFERENCES Anime(id)
 );
 
--- Groups table to represent different interest groups
-CREATE TABLE `groups` (
-    `id` INT PRIMARY KEY AUTO_INCREMENT,
-    `name` VARCHAR(255) NOT NULL UNIQUE,
-    `description` TEXT,
-    `creator_id` INT NOT NULL, -- Added foreign key to reference users table
-    `created_at` DATETIME DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (`creator_id`) REFERENCES `users`(`id`)
+-- Table: Studios
+CREATE TABLE Studios (
+    id SERIAL PRIMARY KEY,
+    studio_name VARCHAR(255) NOT NULL
 );
 
--- UserGroups table to manage many-to-many relationship between users and groups
-CREATE TABLE `user_groups` (
-    `user_id` INT NOT NULL,
-    `group_id` INT NOT NULL,
-    PRIMARY KEY (`user_id`, `group_id`),
-    FOREIGN KEY (`user_id`) REFERENCES `users`(`id`),
-    FOREIGN KEY (`group_id`) REFERENCES `groups`(`id`),
-    INDEX `user_groups_user_id_index` (`user_id`),
-    INDEX `user_groups_group_id_index` (`group_id`)
+-- Table: Episodes
+CREATE TABLE Episodes (
+    id SERIAL PRIMARY KEY,
+    anime_id INT REFERENCES Anime(id),
+    episode_number INT,
+    title VARCHAR(255),
+    description TEXT
 );
 
--- Events table to store information about events
-CREATE TABLE `events` (
-    `id` INT PRIMARY KEY AUTO_INCREMENT,
-    `name` VARCHAR(255) NOT NULL UNIQUE,
-    `date` DATE NOT NULL,
-    `location` VARCHAR(255),
-    `interests` TEXT,
-    `creator_id` INT NOT NULL, -- Added foreign key to reference users table
-    `group_id` INT, -- Added foreign key to reference groups table
-    `created_at` DATETIME DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (`creator_id`) REFERENCES `users`(`id`),
-    FOREIGN KEY (`group_id`) REFERENCES `groups`(`id`)
+-- Table: Genres
+CREATE TABLE Genres (
+    id SERIAL PRIMARY KEY,
+    genre_name VARCHAR(255) NOT NULL
 );
 
--- UserEvents table to manage many-to-many relationship between users and events
-CREATE TABLE `user_events` (
-    `user_id` INT NOT NULL,
-    `event_id` INT NOT NULL,
-    PRIMARY KEY (`user_id`, `event_id`),
-    FOREIGN KEY (`user_id`) REFERENCES `users`(`id`),
-    FOREIGN KEY (`event_id`) REFERENCES `events`(`id`),
-    INDEX `user_events_user_id_index` (`user_id`),
-    INDEX `user_events_event_id_index` (`event_id`)
+-- Table: Anime_Genres (Many-to-Many relationship between Anime and Genres)
+CREATE TABLE Anime_Genres (
+    id SERIAL PRIMARY KEY,
+    anime_id INT REFERENCES Anime(id),
+    genre_id INT REFERENCES Genres(id)
 );
 
--- Contents table to store shared content
-CREATE TABLE `contents` (
-    `id` INT PRIMARY KEY AUTO_INCREMENT,
-    `user_id` INT NOT NULL,
-    `event_id` INT NOT NULL,
-    `type` VARCHAR(255) NOT NULL,
-    `text` TEXT,
-    `created_at` DATETIME DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (`user_id`) REFERENCES `users`(`id`),
-    FOREIGN KEY (`event_id`) REFERENCES `events`(`id`),
-    INDEX `contents_user_id_index` (`user_id`),
-    INDEX `contents_event_id_index` (`event_id`)
-);
-
--- UserMatches table to store information about matched users
-CREATE TABLE `user_matches` (
-    `id` INT PRIMARY KEY AUTO_INCREMENT,
-    `user_id1` INT NOT NULL,
-    `user_id2` INT NOT NULL,
-    `compatibility_score` DECIMAL(5, 2) NOT NULL,
-    `created_at` DATETIME DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (`user_id1`) REFERENCES `users`(`id`),
-    FOREIGN KEY (`user_id2`) REFERENCES `users`(`id`),
-    UNIQUE (`user_id1`, `user_id2`), -- Ensures only one match record exists for each pair
-    INDEX `user_matches_user_id1_index` (`user_id1`),
-    INDEX `user_matches_user_id2_index` (`user_id2`),
-    INDEX `user_matches_score_index` (`compatibility_score`)
+-- Table: Voice_Actors
+CREATE TABLE Voice_Actors (
+    id SERIAL PRIMARY KEY,
+    voice_actor_name VARCHAR(255) NOT NULL,
+    character_id INT REFERENCES Characters(id)
 );
