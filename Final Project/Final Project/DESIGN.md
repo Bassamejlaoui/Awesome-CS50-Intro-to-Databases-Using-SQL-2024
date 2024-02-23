@@ -1,125 +1,93 @@
-# SocialConnect DESIGN.md
+# Design Document
 
-By Abiola Oluwaseun Onasanya
+By Bassam Mejlaoui
 
-## Video Overview: https://youtu.be/QZTmWdfmNXs
+Video overview: https://youtu.be/aZ7WCZzZUg0
 
 ## Scope
 
-### Purpose of the Database
-The purpose of the SocialConnect database is to facilitate meaningful connections among users with similar interests or backgrounds. It aims to provide a platform where users can create profiles, join groups, attend events, share content, and leverage matching algorithms for enhanced social interactions.
+### Purpose of the Database:
+The purpose of this database is to serve as a comprehensive repository of information related to various anime series, including details about the anime titles, characters, studios, episodes, genres, and voice actors.
 
-### Inclusions and Exclusions
-**Inclusions:**
-- User profiles with attributes like `id` (UserID), `username`, `email`, and `interests`.
-- User interests through the `UserInterests` table.
-- Interest groups with attributes such as `id` (GroupID), `name` (GroupName), and `description`.
-- Events with details like `id` (EventID), `name` (EventName), `date`, `location`, and `interests`.
-- Content sharing functionality through the `contents` table.
-- User matching functionality through the `user_matches` table.
+### Included in Scope:
+- Anime titles
+- Characters (e.g., protagonists, antagonists, supporting characters)
+- Studios producing the anime
+- Episodes of each anime series
+- Genres of anime
+- Voice actors providing voices for characters
 
-**Exclusions:**
-- Financial data (e.g., personal finance details).
-- Highly sensitive personal information beyond the scope of social connections.
+### Outside the Scope:
+- Detailed reviews or ratings of anime
+- User-specific data (e.g., user preferences, watch history)
+- Licensing or legal information related to anime distribution
 
 ## Functional Requirements
 
-### User Capabilities
+### User Capabilities:
 Users should be able to:
-- Create and manage profiles with essential details.
-- Join interest groups and attend events.
-- Share content with the community.
-- Receive recommendations for potential matches based on shared interests.
+- Browse and search for anime titles
+- View information about characters, studios, episodes, and voice actors
+- Filter anime by genre
+- Add new anime titles, characters, episodes, etc. to the database
+- Update existing information (e.g., descriptions, release years)
+- Delete outdated or incorrect data entries
 
-### Beyond Scope
-- Financial transactions or management.
-- Detailed personal information not related to social connections.
+### Beyond Scope:
+- User authentication and authorization mechanisms
+- E-commerce features for purchasing anime merchandise or subscriptions
 
 ## Representation
 
 ### Entities
 
-**Users:**
-- `id` (Primary Key)
-- `username`
-- `email`
-- `created_at`
-- Other user-related attributes as needed.
+1. **Anime**
+   - Attributes: id, title, studio_id, release_year, description
+   - Types: VARCHAR for title and description, INT for IDs and release_year
+   - Constraints: NOT NULL for title, studio_id, and release_year
 
-**UserInterests:**
-- `user_id` (Foreign Key referencing Users)
-- `interest`
-- Primary Key: (`user_id`, `interest`)
+2. **Characters**
+   - Attributes: id, character_name, anime_id
+   - Types: VARCHAR for character_name, INT for IDs
+   - Constraints: NOT NULL for character_name and anime_id
 
-**Groups:**
-- `id` (Primary Key)
-- `name`
-- `description`
-- `creator_id` (Foreign Key referencing Users)
-- `created_at`
-- Other group-related attributes as needed.
+3. **Studios**
+   - Attributes: id, studio_name
+   - Types: VARCHAR for studio_name, INT for IDs
+   - Constraints: NOT NULL for studio_name
 
-**UserGroups:**
-- `user_id` (Foreign Key referencing Users)
-- `group_id` (Foreign Key referencing Groups)
-- Primary Key: (`user_id`, `group_id`)
+4. **Episodes**
+   - Attributes: id, anime_id, episode_number, title, description
+   - Types: VARCHAR for title and description, INT for IDs and episode_number
+   - Constraints: NOT NULL for anime_id and episode_number
 
-**Events:**
-- `id` (Primary Key)
-- `name`
-- `date`
-- `location`
-- `interests`
-- `creator_id` (Foreign Key referencing Users)
-- `group_id` (Foreign Key referencing Groups)
-- `created_at`
-- Other event-related attributes as needed.
+5. **Genres**
+   - Attributes: id, genre_name
+   - Types: VARCHAR for genre_name, INT for IDs
+   - Constraints: NOT NULL for genre_name
 
-**UserEvents:**
-- `user_id` (Foreign Key referencing Users)
-- `event_id` (Foreign Key referencing Events)
-- Primary Key: (`user_id`, `event_id`)
-
-**Contents:**
-- `id` (Primary Key)
-- `user_id` (Foreign Key referencing Users)
-- `event_id` (Foreign Key referencing Events)
-- `type`
-- `text`
-- `created_at`
-- Other content-related attributes as needed.
-
-**UserMatches:**
-- `id` (Primary Key)
-- `user_id1` (Foreign Key referencing Users)
-- `user_id2` (Foreign Key referencing Users)
-- `compatibility_score`
-- `created_at`
-- Other match-related attributes as needed.
+6. **Voice_Actors**
+   - Attributes: id, voice_actor_name, character_id
+   - Types: VARCHAR for voice_actor_name, INT for IDs and character_id
+   - Constraints: NOT NULL for voice_actor_name and character_id
 
 ### Relationships
 
-#### Entity Relationship Diagram (ERD)
-![SocialConnect ERD](https://i.imgur.com/geFVkLc.png)
+![Entity Relationship Diagram](ERD.png)
 
-**Descriptions:**
-- Users can join multiple groups (many-to-many relationship).
-- Users can attend multiple events (many-to-many relationship).
-- Users can share multiple content items.
-- Matching between users based on shared interests (UserMatches).
+**Relationships:**
+- One-to-Many relationship between Anime and Episodes (One anime can have multiple episodes)
+- One-to-Many relationship between Anime and Characters (One anime can have multiple characters)
+- One-to-Many relationship between Characters and Voice_Actors (One character can have multiple voice actors)
+- Many-to-Many relationship between Anime and Genres (One anime can belong to multiple genres and vice versa)
 
 ## Optimizations
 
-### Indexing
-- Indexes on `id` in Users, Groups, Events, Contents, and UserMatches tables for faster retrieval.
-- Indexes on `user_id` in UserGroups, UserEvents, Contents, and UserMatches for efficient queries involving users.
-- Indexes on `group_id` and `event_id` in UserGroups, UserEvents, and Contents for optimized group and event membership queries.
-
-### Views
-- A view to display matched users and their match strengths.
+- Indexes on frequently queried columns such as title in the Anime table for faster search operations.
+- Views for commonly used queries, such as retrieving all characters for a particular anime.
 
 ## Limitations
 
-- The platform may not handle financial transactions or detailed personal finance management.
-- The matching algorithm is based on shared interests and may not consider other factors like location.
-- The system might face limitations in representing highly complex relationships or intricate social scenarios.
+- The database may not capture all possible anime genres comprehensively.
+- It may not represent complex relationships between characters or story arcs within an anime series effectively.
+- Limited support for multilingual or internationalized data, such as titles or descriptions in languages other than English.
