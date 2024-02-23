@@ -17,7 +17,7 @@
 
 **This repository contains my solutions for CS50's Introduction to Databases using SQL 2024. Please note that these codes are intended for educational purposes only and should not be used or submitted as your own solutions. Cheating violates the Academic Honesty of the course and undermines the learning process.**
 
-### My Harvard CS50 Intro to Python Certificate:
+### My Harvard CS50 Intro to Databses using SQL Certificate:
 ![Bassam Mejlaoui CS50 SQL2024 Certificate](https://certificates.cs50.io/a182b590-de0b-489c-92ff-ae1b9c9ea549.png?size=letter)
 
 ## Final Project: AnimeHub Database
