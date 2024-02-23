@@ -41,9 +41,9 @@
 ### Week 1
 | week  | Problem Sets |
 | ------------- | ------------- |
-| week 1 | ["Packages, Please"] (https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%201/Packages%2C%20Please)|
-| week 1 | [DESE] (https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%201/DESE) |
-| week 1 | [Moneyball] (https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%201/Moneyball) |
+| week 1 | ["Packages, Please"](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%201/Packages%2C%20Please)|
+| week 1 | [DESE](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%201/DESE) |
+| week 1 | [Moneyball](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%201/Moneyball) |
 
 ### Week 2¨
 | week  | Problem Sets |
