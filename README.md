@@ -62,9 +62,6 @@
 - [Don’t Panic! (Sentimental) with Python](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%206/Don't%20Panic%20(Sentimental)%20in%20Python)
 
 ### Final Project
-- [Final Project Link](Final%20Project)
-
-## Final Project
-- [Final Project](Final%20Project)
+- [AnimeHub Database](Final%20Project)
 
 Feel free to explore the repository for a comprehensive overview of the CS50SQL 2024 curriculum, whether you're a current student seeking reference or someone interested in delving into database concepts.
