@@ -1,86 +1,109 @@
-# SocialConnect
+# AnimeHub README
 
-## Overview
+## Project Overview
 
-Welcome to SocialConnect! This is a social networking platform database designed to connect users based on their interests, groups, events, and shared content. Users can join groups, attend events, share content, and discover potential matches with similar interests.
+AnimeHub is a comprehensive database designed to serve as a centralized repository of information related to various anime series. Created by Bassam Mejlaoui, this project aims to provide users with detailed insights into anime titles, characters, studios, episodes, genres, and voice actors.
 
-## Schema
+For a quick overview, you can watch the video: [AnimeHub Overview](https://youtu.be/aZ7WCZzZUg0).
 
-The database schema is composed of several tables to capture different aspects of the social networking platform:
+## Scope
 
-### Users Table
+### Purpose of the Database
 
-- `id`: Uniquely identifies each user.
-- `username`: User's unique username.
-- `email`: User's email address.
-- `created_at`: Timestamp of user creation.
+The primary purpose of AnimeHub is to offer a one-stop solution for anime enthusiasts to explore and gather information about their favorite anime series. It covers essential details such as titles, characters, studios, episodes, genres, and voice actors.
 
-### UserInterests Table
+### Included in Scope
 
-- `user_id`: References the user with specific interests.
-- `interest`: User's interests or hobbies.
+- Anime Titles
+- Characters (protagonists, antagonists, supporting characters)
+- Studios Producing the Anime
+- Episodes of Each Anime Series
+- Genres of Anime
+- Voice Actors Providing Voices for Characters
 
-### Groups Table
+### Outside the Scope
 
-- `id`: Uniquely identifies each group.
-- `name`: Name of the group.
-- `description`: Description of the group.
-- `creator_id`: References the creator of the group (user).
-- `created_at`: Timestamp of group creation.
+AnimeHub intentionally does not cover the following areas:
 
-### UserGroups Table
+- Detailed reviews or ratings of anime
+- User-specific data (preferences, watch history)
+- Licensing or legal information related to anime distribution
 
-- `user_id`: References the user who joined the group.
-- `group_id`: References the group that the user joined.
+## Functional Requirements
 
-### Events Table
+### User Capabilities
 
-- `id`: Uniquely identifies each event.
-- `name`: Name of the event.
-- `date`: Date of the event.
-- `location`: Location of the event.
-- `interests`: Interests associated with the event.
-- `creator_id`: References the creator of the event (user).
-- `group_id`: References the group associated with the event.
-- `created_at`: Timestamp of event creation.
+Users can:
 
-### UserEvents Table
+- Browse and search for anime titles
+- View information about characters, studios, episodes, and voice actors
+- Filter anime by genre
+- Add new anime titles, characters, episodes, etc., to the database
+- Update existing information (descriptions, release years)
+- Delete outdated or incorrect data entries
 
-- `user_id`: References the user who is attending the event.
-- `event_id`: References the event that the user is attending.
+### Beyond Scope
 
-### Contents Table
+The following features are intentionally excluded:
 
-- `id`: Uniquely identifies each content.
-- `user_id`: References the user who shared the content.
-- `event_id`: References the event associated with the content.
-- `type`: Type of content (e.g., text).
-- `text`: Content text.
-- `created_at`: Timestamp of content creation.
+- User authentication and authorization mechanisms
+- E-commerce features for purchasing anime merchandise or subscriptions
 
-### UserMatches Table
+## Representation
 
-- `id`: Uniquely identifies each match.
-- `user_id1`: References the first user in the match.
-- `user_id2`: References the second user in the match.
-- `compatibility_score`: Strength of the match.
-- `created_at`: Timestamp of match creation.
+### Entities
 
-## Files
+1. **Anime**
+   - Attributes: id, title, studio_id, release_year, description
+   - Types: VARCHAR for title and description, INT for IDs and release_year
+   - Constraints: NOT NULL for title, studio_id, and release_year
 
-- `schema.sql`: Annotated set of SQL statements that compose the database schema.
-- `queries.sql`: Annotated set of SQL statements that users will commonly run on the database.
+2. **Characters**
+   - Attributes: id, character_name, anime_id
+   - Types: VARCHAR for character_name, INT for IDs
+   - Constraints: NOT NULL for character_name and anime_id
 
-## Design Document (DESIGN.md)
+3. **Studios**
+   - Attributes: id, studio_name
+   - Types: VARCHAR for studio_name, INT for IDs
+   - Constraints: NOT NULL for studio_name
 
-Please refer to [DESIGN.md](DESIGN.md) for a detailed design document describing the database’s purpose, scope, entities, relationships, optimizations, and limitations.
+4. **Episodes**
+   - Attributes: id, anime_id, episode_number, title, description
+   - Types: VARCHAR for title and description, INT for IDs and episode_number
+   - Constraints: NOT NULL for anime_id and episode_number
 
-## Entity Relationship Diagram
+5. **Genres**
+   - Attributes: id, genre_name
+   - Types: VARCHAR for genre_name, INT for IDs
+   - Constraints: NOT NULL for genre_name
 
-Below is an entity relationship diagram for the SocialConnect database:
+6. **Voice_Actors**
+   - Attributes: id, voice_actor_name, character_id
+   - Types: VARCHAR for voice_actor_name, INT for IDs and character_id
+   - Constraints: NOT NULL for voice_actor_name and character_id
 
-![SocialConnect ERD](https://i.imgur.com/geFVkLc.png)
+### Relationships
 
-## Video Overview
+Refer to the included Entity Relationship Diagram (ERD.png) for a visual representation.
 
-Watch a short video overview of SocialConnect on [YouTube](https://youtu.be/QZTmWdfmNXs).
+**Relationships:**
+- One-to-Many relationship between Anime and Episodes (One anime can have multiple episodes)
+- One-to-Many relationship between Anime and Characters (One anime can have multiple characters)
+- One-to-Many relationship between Characters and Voice_Actors (One character can have multiple voice actors)
+- Many-to-Many relationship between Anime and Genres (One anime can belong to multiple genres and vice versa)
+
+## Optimizations
+
+To enhance performance:
+
+- Indexes on frequently queried columns such as title in the Anime table for faster search operations.
+- Views for commonly used queries, such as retrieving all characters for a particular anime.
+
+## Limitations
+
+- The database may not capture all possible anime genres comprehensively.
+- It may not represent complex relationships between characters or story arcs within an anime series effectively.
+- Limited support for multilingual or internationalized data, such as titles or descriptions in languages other than English.
+
+Feel free to contribute to the growth and improvement of AnimeHub!
