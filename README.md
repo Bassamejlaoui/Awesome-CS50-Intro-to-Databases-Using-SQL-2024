@@ -30,36 +30,36 @@
 
 ## Table of Contents
 ### Week 0
-- [Cyberchase](Week%200/Cyberchase)
-- [36 Views](Week%200/36%20Views)
-- [Normals](Week%200/Normals)
-- [Players](Week%200/Players)
+- [Cyberchase](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%200/Cyberchase)
+- [36 Views](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%200/36%20Views)
+- [Normals](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%200/Normals)
+- [Players](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%200/Players)
 
 ### Week 1
-- ["Packages, Please"](Week%201/Packages%2C%20Please)
-- [DESE](Week%201/DESE)
-- [Moneyball](Week%201/Moneyball)
+- ["Packages, Please"](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%201/Packages%2C%20Please)
+- [DESE](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%201/DESE)
+- [Moneyball](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%201/Moneyball)
 
 ### Week 2
-- [ATL](Week%202/ATL)
-- [Happy to Connect](Week%202/Happy%20to%20Connect)
-- [Union Square Donuts](Week%202/Union%20Square%20Donuts)
+- [ATL](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%202/ATL)
+- [Happy to Connect](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%202/Happy%20to%20Connect)
+- [Union Square Donuts](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%202/Union%20Square%20Donuts)
 
 ### Week 3
-- [Don't Panic!](Week%203/Don't%20Panic%21)
-- [Meteorite Cleaning](Week%203/Meteorite%20Cleaning)
+- [Don't Panic!](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%203/Don't%20Panic)
+- [Meteorite Cleaning](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%203/Meteorite%20Cleaning)
 
 ### Week 4
-- [Census Taker](Week%204/Census%20Taker)
-- [The Private Eye](Week%204/The%20Private%20Eye)
-- [Bed and Breakfast](Week%204/Bed%20and%20Breakfast)
+- [Census Taker](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%204/Census%20Taker)
+- [The Private Eye](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%204/The%20Private%20Eye)
+- [Bed and Breakfast](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%204/Bed%20and%20Breakfast)
 
 ### Week 5
-- [your.harvard](Week%205/your.harvard)
+- [your.harvard](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%205)
 
 ### Week 6
-- [Happy to Connect (Sentimental)](Week%206/Happy%20to%20Connect%20%28Sentimental%29)
-- [Don’t Panic! (Sentimental) with Python](Week%206/Don’t%20Panic!%20%28Sentimental%29%20with%20Python)
+- [Happy to Connect (Sentimental)](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%206/Happy%20to%20Connect%20(Sentimental))
+- [Don’t Panic! (Sentimental) with Python](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%206/Don't%20Panic%20(Sentimental)%20in%20Python)
 
 ### Final Project
 - [Final Project Link](Final%20Project)
