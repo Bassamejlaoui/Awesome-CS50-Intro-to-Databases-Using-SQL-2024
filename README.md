@@ -61,9 +61,7 @@
 ### Week 4
 | Viewing  | Problem Sets |  Description |
 | ------------- | ------------- | ------------- |
-| week 4 | [Census Taker](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%204/Census%20Taker) |Create SQL views for census data in `census.db`:
-
-1. `rural.sql`: Create a view named `rural` with data from rural municipalities.
+| week 4 | [Census Taker](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%204/Census%20Taker) |Create SQL views for census data in `census.db`:1. `rural.sql`: Create a view named `rural` with data from rural municipalities.
 2. `total.sql`: Create a view named `total` with sums of numeric columns for all localities in Nepal.
 3. `by_district.sql`: Create a view named `by_district` with sums of numeric columns grouped by district.
 4. `most_populated.sql`: Create a view named `most_populated` with districts ordered by population.
