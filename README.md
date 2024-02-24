@@ -79,7 +79,6 @@
 ### Final Project
 | Final Project  |  Description |
 | ------------- | ------------- |
-|[AnimeHub Database](Final%20Project) | AnimeHub, created by Bassam Mejlaoui, is a comprehensive anime database providing users with detailed information on anime titles, characters, studios, episodes, genres, and voice actors. Users can browse, search, and contribute to the database, while the project intentionally excludes user-specific data and detailed reviews, focusing on being a centralized resource for anime enthusiasts.
-For a quick overview, watch the [AnimeHub Overview](https://youtu.be/aZ7WCZzZUg0).
+|[AnimeHub Database](Final%20Project) | AnimeHub, created by Bassam Mejlaoui, is a comprehensive anime database providing users with detailed information on anime titles, characters, studios, episodes, genres, and voice actors. Users can browse, search, and contribute to the database, while the project intentionally excludes user-specific data and detailed reviews, focusing on being a centralized resource for anime enthusiasts, For a quick overview, watch the [AnimeHub Overview](https://youtu.be/aZ7WCZzZUg0).
 
 Feel free to explore the repository for a comprehensive overview of the CS50SQL 2024 curriculum, whether you're a current student seeking reference or someone interested in delving into database concepts.
