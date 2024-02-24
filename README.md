@@ -61,23 +61,26 @@
 ### Week 4
 | Viewing  | Problem Sets |  Description |
 | ------------- | ------------- | ------------- |
-| week 4 | [Census Taker](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%204/Census%20Taker) |Create SQL views for census data in `census.db`:1. `rural.sql`: Create a view named `rural` with data from rural municipalities.
-2. `total.sql`: Create a view named `total` with sums of numeric columns for all localities in Nepal.
-3. `by_district.sql`: Create a view named `by_district` with sums of numeric columns grouped by district.
-4. `most_populated.sql`: Create a view named `most_populated` with districts ordered by population.
+| week 4 | [Census Taker](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%204/Census%20Taker) |Create a view named `message` in `private.db` to decode a book cipher using the `sentences` table. The `private.sql` file contains the necessary SQL statements to reconstruct the view. Ensure it returns phrases when queried with `SELECT "phrase" FROM "message";`. Utilize the `substr` function for extracting substrings based on the triplet values (sentence number, starting character, and length) provided in the paper.
 | week 4 | [The Private Eye](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%204/The%20Private%20Eye) |Create a view named `message` in `private.db` to decode a book cipher using the `sentences` table. Write the necessary SQL statements in `private.sql` to reconstruct the view, and ensure it returns phrases when queried with `SELECT "phrase" FROM "message";`. Use the `substr` function to extract substrings based on the triplet values (sentence number, starting character, and length) given in the paper.
-| week 4 | [Bed and Breakfast](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%204/Bed%20and%20Breakfast) |✅
+| week 4 | [Bed and Breakfast](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%204/Bed%20and%20Breakfast) |Create SQL views in `bnb.db` to analyze AirBnB data, including a view excluding descriptions, one for one-bedroom listings, available dates, frequently reviewed listings, and June vacancies.
 
 ### Week 5
 | Optimizing  | Problem Sets |  Description |
 | ------------- | ------------- | ------------- |
-| week 5 | [your.harvard](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%205) |✅
+| week 5 | [your.harvard](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%205) |Create SQL indexes in `harvard.db` to optimize querying for the my.harvard database. Analyze typical SELECT queries, use EXPLAIN QUERY PLAN to identify where indexes can improve performance, and write corresponding SQL statements in `indexes.sql`. Balance the trade-off between speed and disk space, minimize the number of indexes, and use DROP INDEX to remove unnecessary indexes. Aim to enhance the efficiency of my.harvard's database for common queries.
 
 ### Week 6
 | Scaling  | Problem Sets |  Description |
 | ------------- | ------------- | ------------- |
-| week 6 | [Happy to Connect (Sentimental)](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%206/Happy%20to%20Connect%20(Sentimental)) |✅
-| week 6 | [Don’t Panic! (Sentimental) with Python](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%206/Don't%20Panic%20(Sentimental)%20in%20Python) |✅
+| week 6 | [Happy to Connect (Sentimental)](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%206/Happy%20to%20Connect%20(Sentimental)) |Create a MySQL database schema for LinkedIn in a file called `schema.sql` in the folder `sentimental-connect`. Design the schema to represent users, schools, universities, companies, and connections. Ensure the database can store relevant information for each entity, such as user details, school information, company details, and connection data. Use appropriate MySQL data types and consider normalization for efficiency. Include SQL statements in `schema.sql` to create the required tables and relationships. Test your database with sample data provided in the problem statement. Use MySQL commands to start and connect to the MySQL server, create a new database named `linkedin`, and switch to the `linkedin` database. Check your schema's correctness with `check50 cs50/problems/2024/sql/sentimental/connect`.
+| week 6 | [Don’t Panic! (Sentimental) with Python](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%206/Don't%20Panic%20(Sentimental)%20in%20Python) |Write a Python program in `hack.py` that connects to the SQLite database `dont-panic.db` using the CS50 library. Alter the administrator's password by executing a SQL UPDATE statement. Ensure that the program prompts the user for a new password using a prepared statement. Test the program and submit your work using the provided commands:
+
+```bash
+python hack.py
+check50 cs50/problems/2024/sql/sentimental/dont-panic/python
+submit50 cs50/problems/2024/sql/sentimental/dont-panic/python
+```
 
 ### Final Project
 - [AnimeHub Database](Final%20Project)
