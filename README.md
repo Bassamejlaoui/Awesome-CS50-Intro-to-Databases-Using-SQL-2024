@@ -75,9 +75,11 @@
 | ------------- | ------------- | ------------- |
 | week 6 | [Happy to Connect (Sentimental)](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%206/Happy%20to%20Connect%20(Sentimental)) |Create a MySQL database schema for LinkedIn in a file called `schema.sql` in the folder `sentimental-connect`. Design the schema to represent users, schools, universities, companies, and connections. Ensure the database can store relevant information for each entity, such as user details, school information, company details, and connection data. Use appropriate MySQL data types and consider normalization for efficiency. Include SQL statements in `schema.sql` to create the required tables and relationships. Test your database with sample data provided in the problem statement. Use MySQL commands to start and connect to the MySQL server, create a new database named `linkedin`, and switch to the `linkedin` database. Check your schema's correctness with `check50 cs50/problems/2024/sql/sentimental/connect`.
 | week 6 | [Don’t Panic! (Sentimental) with Python](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%206/Don't%20Panic%20(Sentimental)%20in%20Python) |Write a Python program `hack.py` using CS50 library to connect to SQLite database `dont-panic.db`. Prompt user for a new password and use a prepared statement to update the administrator's password in the database.
-```
 
 ### Final Project
-- [AnimeHub Database](Final%20Project)
+| Final Project  |  Description |
+| ------------- | ------------- |
+|[AnimeHub Database](Final%20Project) | AnimeHub, created by Bassam Mejlaoui, is a comprehensive anime database providing users with detailed information on anime titles, characters, studios, episodes, genres, and voice actors. Users can browse, search, and contribute to the database, while the project intentionally excludes user-specific data and detailed reviews, focusing on being a centralized resource for anime enthusiasts.
+For a quick overview, watch the [AnimeHub Overview](https://youtu.be/aZ7WCZzZUg0).
 
 Feel free to explore the repository for a comprehensive overview of the CS50SQL 2024 curriculum, whether you're a current student seeking reference or someone interested in delving into database concepts.
