@@ -42,21 +42,21 @@
 | Relating  | Problem Sets |  Description |
 | ------------- | ------------- | ------------- |
 | week 1 | ["Packages, Please"](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%201/Packages%2C%20Please)|This problem set involves locating missing packages in Boston using a provided database. Utilize SQL queries to find each package's current address and details, maintaining a log of queries in log.sql and recording results in answers.txt.
-| week 1 | [DESE](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%201/DESE) |✅
-| week 1 | [Moneyball](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%201/Moneyball) |✅
+| week 1 | [DESE](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%201/DESE) |This problem set involves analyzing data from the Massachusetts Department of Elementary and Secondary Education (DESE) to answer questions related to public education in the state. Use SQL queries on the provided dese.db database to extract relevant information and address various aspects of education, such as district operations, expenditures, graduation rates, and more.
+| week 1 | [Moneyball](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%201/Moneyball) |This problem set involves analyzing data from the moneyball.db database, focusing on player salaries, performances, and team statistics in Major League Baseball up until 2001. Use SQL queries to extract relevant information and address various aspects such as average player salaries, specific player histories, team statistics, and more.
 
 ### Week 2¨
 | Designing  | Problem Sets |  Description |
 | ------------- | ------------- | ------------- |
-| week 2| [ATL](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%202/ATL)|✅
-| week 2 | [Happy to Connect](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%202/Happy%20to%20Connect)|✅
-| week 2 | [Union Square Donuts](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%202/Union%20Square%20Donuts) |✅
+| week 2| [ATL](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%202/ATL)|This problem set revolves around the analysis of data stored in the moneyball.db database, which encompasses player salaries, performances, and team statistics in Major League Baseball up until 2001. The primary objective is to employ SQL queries to extract pertinent information, addressing diverse aspects such as average player salaries, individual player histories, team statistics, and other key metrics. Through a series of tasks, this problem set assesses your ability to navigate and manipulate baseball-related data, honing your SQL querying skills in a real-world sports analytics context.
+| week 2 | [Happy to Connect](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%202/Happy%20to%20Connect)|This problem set tasks you with designing a SQLite database for LinkedIn, encompassing user details, educational institutions, companies, and connections. The goal is to ensure the database meets LinkedIn's specifications and can effectively store sample data provided in the prompt.
+| week 2 | [Union Square Donuts](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%202/Union%20Square%20Donuts) |This problem set involves designing a SQLite database for Union Square Donuts, a renowned shop in the Boston area. The task is to create a schema.sql file within the "donuts" folder, comprising SQL statements to construct a database suitable for managing the shop's ingredients, donuts, orders, and customer information. The goal is to meet the team's expectations and effectively represent the provided sample data.
 
 ### Week 3
 | Writing  | Problem Sets |  Description |
 | ------------- | ------------- | ------------- |
-| week 3 | [Don't Panic!](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%203/Don't%20Panic) |✅
-| week 3 | [Meteorite Cleaning](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%203/Meteorite%20Cleaning) |✅
+| week 3 | [Don't Panic!](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%203/Don't%20Panic) |This task involves simulating a penetration test on a SQLite database. In "hack.sql" within the "dont-panic" folder, write SQL statements to: 1) change the admin password to "oops!", 2) erase password change logs, and 3) add false data framing emily33. Test with `.read hack.sql`, reset with `.read reset.sql`, and check correctness with `check50`.
+| week 3 | [Meteorite Cleaning](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%203/Meteorite%20Cleaning) |This problem involves cleaning and importing a CSV file containing historical meteorite landings into an SQLite database. Write SQL statements in `import.sql` to create and clean a table named `meteorites` in a database named `meteorites.db`. The cleaning process includes handling empty values, rounding decimal values, excluding certain entries, sorting entries, and assigning IDs. Test using `cat import.sql | sqlite3 meteorites.db` and consider using `rm meteorites.db` to reset the database for re-testing. Check correctness with `check50 cs50/problems/2024/sql/meteorites`.
 
 ### Week 4
 | Viewing  | Problem Sets |  Description |
