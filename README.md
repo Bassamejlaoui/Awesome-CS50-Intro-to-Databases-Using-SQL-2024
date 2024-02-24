@@ -61,8 +61,13 @@
 ### Week 4
 | Viewing  | Problem Sets |  Description |
 | ------------- | ------------- | ------------- |
-| week 4 | [Census Taker](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%204/Census%20Taker) |✅
-| week 4 | [The Private Eye](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%204/The%20Private%20Eye) |✅
+| week 4 | [Census Taker](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%204/Census%20Taker) |Create SQL views for census data in `census.db`:
+
+1. `rural.sql`: Create a view named `rural` with data from rural municipalities.
+2. `total.sql`: Create a view named `total` with sums of numeric columns for all localities in Nepal.
+3. `by_district.sql`: Create a view named `by_district` with sums of numeric columns grouped by district.
+4. `most_populated.sql`: Create a view named `most_populated` with districts ordered by population.
+| week 4 | [The Private Eye](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%204/The%20Private%20Eye) |Create a view named `message` in `private.db` to decode a book cipher using the `sentences` table. Write the necessary SQL statements in `private.sql` to reconstruct the view, and ensure it returns phrases when queried with `SELECT "phrase" FROM "message";`. Use the `substr` function to extract substrings based on the triplet values (sentence number, starting character, and length) given in the paper.
 | week 4 | [Bed and Breakfast](https://github.com/mejbass/CS50-Intro-to-Databases-Using-SQL/tree/master/Week%204/Bed%20and%20Breakfast) |✅
 
 ### Week 5
