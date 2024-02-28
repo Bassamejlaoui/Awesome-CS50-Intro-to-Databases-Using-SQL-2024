@@ -8,8 +8,7 @@
 </p>
 <p align="center">
   <a href="https://github.com/sindresorhus/awesome">
-![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
-  </a>
+	  
     <a href="https://github.com/mejbass/CS50-Introduction-to-Databases-Using-SQL">
 	<img alt=" - Mejbass" src="https://img.shields.io/badge/Mejbass-CS50--Introduction to Databases using SQL 2024-purple.svg">
   </a>
