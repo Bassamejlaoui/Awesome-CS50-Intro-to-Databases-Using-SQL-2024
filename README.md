@@ -1,4 +1,4 @@
-# CS50SQL 2024 Repository
+# CS50 SQL 2024 Repository
 <p align="center">
 <img src="https://i.imgur.com/Jj740Yd.png" alt="logo" height="150"/>
 </p>
